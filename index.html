@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weekly Sleep Tracker App</title>
+    <link rel="stylesheet" href="Midterm.css" />
+    <script src="Midterm.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <h1>Weekly Sleep Tracker</h1>
+      <h1>Enter User Information</h1>
+      <form id="userInfo" name="userInfo" action="">
+        <!--add the form-->
+        <label for="userName">Username</label>
+        <input
+          type="text"
+          id="userName"
+          name="'userName"
+          placeholder="Enter user name"
+          required
+          maxlength="10"
+        />
+        <label for="age">Age</label>
+        <input
+          type="number"
+          id="age"
+          name="'age"
+          placeholder="Enter user age"
+          required
+          min="5"
+          max="120"
+        />
+        <button type="submit">Enter</button>
+      </form>
+      <!--add the radio buttons for day selection -->
+      <form id="daysForm">
+        <fieldset id="days">
+          <legend>Choose a day:</legend>
+          <input type="radio" value="Monday" name="day" id="Monday" />
+          <label for="Monday">M</label>
+
+          <input type="radio" value="Tuesday" name="day" id="Tuesday" />
+          <label for="Tuesday">T</label>
+
+          <input type="radio" value="Wednesday" name="day" id="Wednesday" />
+          <label for="Wednesday">W</label>
+
+          <input type="radio" value="Thursday" name="day" id="Thursday" />
+          <label for="Thursday">R</label>
+
+          <input type="radio" value="Friday" name="day" id="Friday" />
+          <label for="Friday">F</label>
+
+          <input type="radio" value="Saturday" name="day" id="Saturday" />
+          <label for="Saturday">S</label>
+
+          <input type="radio" value="Sunday" name="day" id="Sunday" />
+          <label for="Sunday">S</label>
+        </fieldset>
+      </form>
+      <!--input for sleep duration-->
+      <form>
+        <label for="sleepDuration">Sleep duration in hours:</label>
+        <input type="text" id="sleepDuration" name="sleepDuration" />
+        <!--button for updating sleep duration-->
+        <button id="updateBtn">Update</button>
+        <!--button for calculating average and min/max sleep-->
+        <button id="averageBtn">Average (Min/Max) sleep</button>
+        <!--text box for showing average sleep-->
+        <label for="averageSleepDuration"
+          >Average (Min/Max) sleep duration in this week:</label
+        >
+        <input
+          type="text"
+          id="averageSleepDuration"
+          name="averageSleepDuration"
+        />
+        <!--button for Track My Sleep -->
+        <button id="trackSleepBtn">Track My Sleep</button>
+      </form>
+
+      <!--div for showing sleep durations when sleep was less than 5 hrs and the corresponding days-->
+      <div id="result">
+        <p id="result_here"></p>
+        <table id="sleep_table"></table>
+      </div>
+    </main>
+    <footer>
+      <br />
+      <a href="https://validator.w3.org/">Validate HTML</a>
+      <br />
+      <a href="https://jigsaw.w3.org/css-validator/">Validate CSS</a>
+    </footer>
+  </body>
+</html>
